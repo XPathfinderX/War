@@ -20,6 +20,9 @@ class Deck:
     def count_cards(self):
         return len(self.cards)
 
+    def draw_card(self):
+        return self.cards.pop()
+
 
 def create_cards():
     ranks = list(range(2, 15))
@@ -37,15 +40,18 @@ cards = create_cards()
 
 random.shuffle(cards)
 
-deck1 = cards[:26]
-deck1 = Deck(deck1)
-deck2 = cards[26:]
-deck2 = Deck(deck2)
+deck1 = Deck(cards[:26])
+deck2 = Deck(cards[26:])
+
+
 print(deck1.count_cards())
 print(deck2.count_cards())
 
-print(deck1.cards[0].name)
-print(deck2.cards[0].name)
+print(deck1.draw_card().name)
+print(deck2.draw_card().name)
+
+print(deck1.count_cards())
+print(deck2.count_cards())
 
 
 
