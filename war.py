@@ -10,10 +10,20 @@ class Card:
         self.rank = rank
         self.name = str(name)
     
-ranks = list(range(2, 15))
-suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
-names = ranks[:9] + ['Jack', 'Queen', 'King', 'Ace']
 
-print(ranks)
-print(suits)
-print(names)
+def create_cards():
+    ranks = list(range(2, 15))
+    suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
+    names = ranks[:9] + ['Jack', 'Queen', 'King', 'Ace']
+    cards = []
+    for suit in suits:
+        for index,rank in enumerate(ranks):
+            card = Card(suit, rank, names[index])
+            cards.append(card)
+    return cards
+
+cards = create_cards()
+print(cards[0])
+print(cards[0].name)
+print(cards[0].rank)
+print(cards[0].suit)
