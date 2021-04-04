@@ -1,8 +1,11 @@
 import random
+from player_class import Player
 
-# Shuffle the cards.
-# Split the cards in half.
-# Make two decks, one with each half.
+# Put number_guess on github. **
+# Create a player class. 
+# Move all 3 classes into their own files.
+# Import them then into the origional file.
+# Make sure all the print statements work. 
 
 class Card:
 
@@ -36,6 +39,8 @@ def create_cards():
     return cards
 
 
+
+
 cards = create_cards()
 
 random.shuffle(cards)
@@ -43,15 +48,17 @@ random.shuffle(cards)
 deck1 = Deck(cards[:26])
 deck2 = Deck(cards[26:])
 
+player1 = Player("John", deck1)
+player2 = Player("Jane", deck2)
 
-print(deck1.count_cards())
-print(deck2.count_cards())
+print(player1.count_cards())
+print(player2.count_cards())
 
-print(deck1.draw_card().name)
-print(deck2.draw_card().name)
+print(player1.draw_card().name)
+print(player2.draw_card().name)
 
-print(deck1.count_cards())
-print(deck2.count_cards())
+print(player1.count_cards())
+print(player2.count_cards())
 
 
 
