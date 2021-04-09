@@ -12,6 +12,9 @@ class Player:
     def draw_card(self):
         return self.deck.draw_card()
 
+    def add_cards(self, cards):
+        self.deck.add_cards(cards)
+        
     
 #     def player_prompt(self):
 #         prompt = input("Would you like to play a game of War? Press 'Y' to continue and 'N' to quit.")
