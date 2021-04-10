@@ -14,7 +14,9 @@ class Player:
 
     def add_cards(self, cards):
         self.deck.add_cards(cards)
-        
+    
+    def has_lost(self):
+        return self.count_cards() == 0
     
 #     def player_prompt(self):
 #         prompt = input("Would you like to play a game of War? Press 'Y' to continue and 'N' to quit.")

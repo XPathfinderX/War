@@ -8,4 +8,6 @@ class Card:
     
     def beats(self, card):
         return self.rank > card.rank
-        
+    
+    def ties(self, card):
+        return self.rank == card.rank
