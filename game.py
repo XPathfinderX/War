@@ -33,3 +33,12 @@ class Game:
     def take_turn(self):
         turn = Turn(self.player1, self.player2)
         turn.print_result()
+    
+    def is_over(self):
+        return self.player1.has_lost() or self.player2.has_lost()
+        
+    def print_winner(self):
+        if self.player1.has_lost():
+            print(f'{self.player2.name} has won the game in {Turn.count} turns!')
+        else:
+            print(f'{self.player1.name} has won the game in {Turn.count} turns!')

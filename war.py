@@ -5,9 +5,11 @@ from game import Game
 
 
 game = Game()
-game.print_status()
-game.take_turn()
-game.print_status()
+while not game.is_over():
+    game.print_status()
+    game.take_turn()
+
+game.print_winner()
 
 
 
